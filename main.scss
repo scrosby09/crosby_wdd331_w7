@@ -1,56 +1,49 @@
-@import 'flex';
-@import 'grid';
+@import "flex";
+@import "grid";
 
 // Size and Shape Variables
 $card-wd: 40vw;
-$card-ht: $card-wd*1.4;
+$card-ht: $card-wd * 1.4;
 $text-size: $card-wd * 0.1;
 $icon-size: $card-wd / 5;
 
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-//styles to draw a basic outline of a card
+// Card Shape and Size
 .card {
-    border: 1px solid darkslategray;
-    height: $card-ht;
-    width: $card-wd;
-    border-radius: 10px;
-    margin: 20px;
-    box-shadow: 2px 2px 4px black;
+  border: 1px solid darkslategray;
+  height: $card-ht;
+  width: $card-wd;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 2px 2px 4px black;
 }
 
-//because it is a card front we want a bit of extra padding
 .card-front {
-    padding: .5em;
+  padding: 0.5em;
 }
 
-
-
-
-//set icon size
+// Icon Shape and Size
 .icon {
-    width: $icon-size;
-    height: $icon-size;
+  width: $icon-size;
+  height: $icon-size;
 }
 
 .number {
-    text-align: center;
-    font-size: $text-size;
-  //an icon that is part of a number should be half the normal size
-    & > .icon {
-        width: $icon-size * .5;
-        height: $icon-size *.5;
-    }
+  text-align: center;
+  font-size: $text-size;
+  & > .icon {
+    width: $icon-size * 0.5;
+    height: $icon-size * 0.5;
+  }
 }
 
-//rotate bottom pips 180deg
 .rotate {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
-

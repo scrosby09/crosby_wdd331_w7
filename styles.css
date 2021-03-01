@@ -1,4 +1,4 @@
-/* flex layout library partial */
+/* Flex Layout Library */
 .row {
     display: flex;
     flex-flow: row wrap;
@@ -36,7 +36,7 @@
     color: blue;
 }
 
-/* grid layout library partial */
+/* Grid Layout Library */
 @supports (display: grid) {
     .row {
         display: grid;
