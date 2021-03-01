@@ -1,11 +1,11 @@
 @import 'flex';
 @import 'grid';
 
-//variables to setup basic size and shape of the card and pips
-$card-width: 40vw;
-$card-height: $card-width*1.4;
-$font-size-number: $card-width * 0.1;
-$icon-size: $card-width / 5;
+// Size and Shape Variables
+$card-wd: 40vw;
+$card-ht: $card-wd*1.4;
+$text-size: $card-wd * 0.1;
+$icon-size: $card-wd / 5;
 
 *,
 *:before,
@@ -17,12 +17,12 @@ $icon-size: $card-width / 5;
 
 //styles to draw a basic outline of a card
 .card {
-    border: 1px solid grey;
-    height: $card-height;
-    width: $card-width;
+    border: 1px solid darkslategray;
+    height: $card-ht;
+    width: $card-wd;
     border-radius: 10px;
     margin: 20px;
-    box-shadow: 2px 2px 4px grey;
+    box-shadow: 2px 2px 4px black;
 }
 
 //because it is a card front we want a bit of extra padding
@@ -41,7 +41,7 @@ $icon-size: $card-width / 5;
 
 .number {
     text-align: center;
-    font-size: $font-size-number;
+    font-size: $text-size;
   //an icon that is part of a number should be half the normal size
     & > .icon {
         width: $icon-size * .5;
