@@ -1,45 +1,43 @@
-/* grid layout library partial */
+/* Grid Layout Library Partial*/
 
 @supports (display: grid) {
+  // Variables
+  $column-count: 8;
+  $column-1: 100% / $column-count;
+  $row-count: 4;
+  $row-1: 100% / $row-count;
+  $loop-start: 1;
+  $loop-end: $column-count + 1;
+  $row-start: 1;
+  $row-end: $row-count + 1;
 
-    //variables
-    $num-columns: 8;
-    $one-column: 100% / $num_columns;
-    $num-rows: 4;
-    $one-row: 100% / $num_rows;
-    $loop-start: 1;
-    $loop-end: $num-columns+1;
-    $row-start: 1;
-    $row-end: $num-rows+1;
+  // Mixins
+  @mixin span($span-num) {
+    grid-column-end: span $span-num;
+  }
 
-    //mixins
-    @mixin span($span-num) {
-        grid-column-end: span $span-num;
-    }
+  @mixin col($col_num) {
+    grid-column-start: $col_num;
+  }
 
-    @mixin col($col_num) {
-        grid-column-start: $col_num;
-    }
+  @mixin row($row_num) {
+    grid-row-start: $row_num;
+    grid-row-end: $row_num + 1;
+  }
 
-    @mixin row($row_num) {
-        grid-row-start: $row_num;
-        grid-row-end: $row_num + 1;
-    }
+  // Grid Span Classes
+  @for $index from $loop-start to $loop-end {
+  }
 
-    //make grid span classes 
-    @for $index from $loop-start to $loop-end {
-    }
+  // Grid Column Classes
+  @for $index from $loop-start to $loop-end {
+  }
 
-    //make grid col classes 
-    @for $index from $loop-start to $loop-end {
-    }
+  // Grid Row Classes
+  @for $index from $row-start to $row-end {
+  }
 
-    //make grid row classes 
-    @for $index from $row-start to $row-end {
-    }
-
-    //disable flex offset classes if grid is supported
-    @for $index from $loop-start to $loop-end {
-    }
-
+  // Flex Offset Classes
+  @for $index from $loop-start to $loop-end {
+  }
 }
