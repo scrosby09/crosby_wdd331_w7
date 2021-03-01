@@ -1,0 +1,45 @@
+/* grid layout library partial */
+
+@supports (display: grid) {
+
+    //variables
+    $num-columns: 8;
+    $one-column: 100% / $num_columns;
+    $num-rows: 4;
+    $one-row: 100% / $num_rows;
+    $loop-start: 1;
+    $loop-end: $num-columns+1;
+    $row-start: 1;
+    $row-end: $num-rows+1;
+
+    //mixins
+    @mixin span($span-num) {
+        grid-column-end: span $span-num;
+    }
+
+    @mixin col($col_num) {
+        grid-column-start: $col_num;
+    }
+
+    @mixin row($row_num) {
+        grid-row-start: $row_num;
+        grid-row-end: $row_num + 1;
+    }
+
+    //make grid span classes 
+    @for $index from $loop-start to $loop-end {
+    }
+
+    //make grid col classes 
+    @for $index from $loop-start to $loop-end {
+    }
+
+    //make grid row classes 
+    @for $index from $row-start to $row-end {
+    }
+
+    //disable flex offset classes if grid is supported
+    @for $index from $loop-start to $loop-end {
+    }
+
+}
